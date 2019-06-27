@@ -1,0 +1,1 @@
+from gym_modified_InvertedDoublePendulum_v2.envs.modified_inverteddoublependulum import ModifiedInvertedDoublePendulumEnv

@@ -1,11 +1,12 @@
 import numpy as np
+from os import path
 from gym import utils
 from gym.envs.mujoco import mujoco_env
 
 class ModifiedInvertedDoublePendulumEnv(mujoco_env.MujocoEnv, utils.EzPickle):
 
     def __init__(self):
-        mujoco_env.MujocoEnv.__init__(self, '../assets/modified_inverted_double_pendulum.xml', 5)
+        mujoco_env.MujocoEnv.__init__(self, os.path.join(os.path.dirname(__file__), "assets/modified_inverted_double_pendulum.xml"), 5)
         utils.EzPickle.__init__(self)
 
     def step(self, action):
